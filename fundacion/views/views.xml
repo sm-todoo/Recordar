@@ -1,0 +1,60 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+<!--
+    <record model="ir.ui.view" id="fundacion.list">
+      <field name="name">fundacion list</field>
+      <field name="model">fundacion.fundacion</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </tree>
+      </field>
+    </record>
+-->
+
+    <!-- actions opening views on models -->
+<!--
+    <record model="ir.actions.act_window" id="fundacion.action_window">
+      <field name="name">fundacion window</field>
+      <field name="res_model">fundacion.fundacion</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+-->
+
+    <!-- server action to the one above -->
+<!--
+    <record model="ir.actions.server" id="fundacion.action_server">
+      <field name="name">fundacion server</field>
+      <field name="model_id" ref="model_fundacion_fundacion"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": model._name,
+        }
+      </field>
+    </record>
+-->
+
+    <!-- Top menu item -->
+<!--
+    <menuitem name="fundacion" id="fundacion.menu_root"/>
+-->
+    <!-- menu categories -->
+<!--
+    <menuitem name="Menu 1" id="fundacion.menu_1" parent="fundacion.menu_root"/>
+    <menuitem name="Menu 2" id="fundacion.menu_2" parent="fundacion.menu_root"/>
+-->
+    <!-- actions -->
+<!--
+    <menuitem name="List" id="fundacion.menu_1_list" parent="fundacion.menu_1"
+              action="fundacion.action_window"/>
+    <menuitem name="Server to list" id="fundacion" parent="fundacion.menu_2"
+              action="fundacion.action_server"/>
+-->
+  </data>
+</odoo>
